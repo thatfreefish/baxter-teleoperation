@@ -76,6 +76,7 @@ rosrun openni_tracker openni_tracker
 
 terminal4:
 rosrun rviz rviz
+
 global options —> Fixed Frame：openni_optical_frame
 
 terminal5：
