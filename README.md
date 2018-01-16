@@ -1,4 +1,4 @@
-参考内容链接：
+参考内容链接：https://github.com/ptsteadman/baxter-teleoperation
 ## Baxter Teleoperation using Kinect and the Oculus Rift
 
 This repository contains code for an interactive console that allows 
@@ -46,24 +46,44 @@ You can then run commands at the `>>>` prompt.
 用kinect在gazebo中让baxter随动
 
 操作的命令行：
+
+
 cd ~/documents/ros
+
 source devel/setup.bash
+
 ifconfig
+
 设置ip地址
+
 gedit baxter.sh
+
 . baxter.sh sim
+
 roslaunch baxter_gazebo baxter_world.launch
+
 
 roslaunch openni_launch openni.launch camera:=openni
 
-cd ~/documents/ros
-source devel/setup.bash
-rosrun openni_tracker openni_tracker
 
 cd ~/documents/ros
+
 source devel/setup.bash
+
+rosrun openni_tracker openni_tracker
+
+
+cd ~/documents/ros
+
+source devel/setup.bash
+
 rosrun baxter_tools enable_robot.py -e
+
 cd ~/桌面/baxter-teleoperation
+
 python baxter_console.py
+
 baxter.idle()
+
 baxter.standby()
+
