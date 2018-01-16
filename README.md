@@ -47,6 +47,7 @@ You can then run commands at the `>>>` prompt.
 
 操作的命令行：
 
+terminal1:
 
 cd ~/documents/ros
 
@@ -60,19 +61,24 @@ gedit baxter.sh
 
 . baxter.sh sim
 
-roslaunch baxter_gazebo baxter_world.launch
+roslaunch baxter_gazebo baxter_world.launch(注：经常出不来baxter)
 
+terminal2:
 
 roslaunch openni_launch openni.launch camera:=openni
 
-
+terminal3:
 cd ~/documents/ros
 
 source devel/setup.bash
 
 rosrun openni_tracker openni_tracker
 
+terminal4:
+rosrun rviz rviz
+global options —> Fixed Frame：openni_optical_frame
 
+terminal5：
 cd ~/documents/ros
 
 source devel/setup.bash
@@ -87,3 +93,4 @@ baxter.idle()
 
 baxter.standby()
 
+baxter.start_teleoperation(1)
